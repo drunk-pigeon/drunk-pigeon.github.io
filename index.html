@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -87,7 +87,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -148,18 +148,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -189,7 +177,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="ZuiYan&#39;s Blog"></span>
           
         </div>
 
@@ -227,15 +215,375 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/10/27/Blog%E6%90%AD%E5%BB%BA/" target="_self">
+        <a href="/2025/04/08/Git/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_self">
+          Git基本使用方法.md
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/08/Git/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_self">
+        <div>
+          Git基本使用方法一、 Git的认识Git可以理解为Github和本地文件集的一个桥梁  二、 Git的使用 Git初始化本地仓库   在需要上传的文件夹中右键，选择Git Bash,输入如下代码    1git init     随后会在当前文件夹初始化Git，可以理解为Git接管了当前文件夹的文件了  添加需要的文件或文件夹到Git临时存储区域    1git add . //添加当前文件夹全
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-08 23:10" pubdate>
+              2025-04-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Git/">#Git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/03/C_Sharp_Study/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" target="_self">
+          构造函数
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/03/C_Sharp_Study/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" target="_self">
+        <div>
+          实例构造函数  用于初始化实例 如果希望在类外部常见类的实例，则需要将构造函数定义为public 构造函数的名称和类名相同 构造函数不能有返回值 当一个类没有写构造函数时，会默认添加一个无参数的默认构造函数  123456789class MyClass&#123;	public MyClass()//没有返回类型	&#123;		...	&#125;	...&#125;  静态构造函数  类只能
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-03 09:14" pubdate>
+              2024-11-03
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/c-study/">#c#study</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/03/C_Sharp_Study/%E5%B1%9E%E6%80%A7/" target="_self">
+          属性
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/03/C_Sharp_Study/%E5%B1%9E%E6%80%A7/" target="_self">
+        <div>
+          属性是类成员 有类型 可以被赋值和读取  属性是一种特殊的函数，没有给它分配内存属性的本质就是用来操作绑定的字段 1234567891011int MyValue&#123;	set//给属性赋值时调用	&#123;		code1;	&#125;	get//获取属性的值时调用	&#123;		code2;	&#125;&#125;  在VS中可以通过图标来区分属性和字段，属性图标是个扳手 只读属
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-03 06:22" pubdate>
+              2024-11-03
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/c-study/">#c#study</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/02/C_Sharp_Study/%E7%B1%BB%E6%88%90%E5%91%98%E5%92%8C%E5%AE%9E%E4%BE%8B/" target="_self">
+          类成员和实例
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/02/C_Sharp_Study/%E7%B1%BB%E6%88%90%E5%91%98%E5%92%8C%E5%AE%9E%E4%BE%8B/" target="_self">
+        <div>
+          静态字段：被类所有实例共享，所有实例访问同一内存位置在内存中的体现：堆中的静态区域字段前加static修饰符
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-02 20:41" pubdate>
+              2024-11-02
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/c-study/">#c#study</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/02/C_Sharp_Study/%E9%80%92%E5%BD%92/" target="_self">
+          递归
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/02/C_Sharp_Study/%E9%80%92%E5%BD%92/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-02 20:24" pubdate>
+              2024-11-02
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/c-study/">#c#study</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/02/C_Sharp_Study/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/" target="_self">
+          方法重载
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/02/C_Sharp_Study/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/" target="_self">
+        <div>
+          同一个类中有一个以上的相同方法名的方法，称为方法重载(overload)（参数数目不同，参数类型和顺序不一样，） 命名参数，可以通过method(a:实参, b:实参)方式 可选参数：带默认值的形参(ref, out,params这些参数是不允许使用可选参数)
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-02 19:45" pubdate>
+              2024-11-02
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/c-study/">#c#study</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/30/CAD_Sec_Dev/CAD_SD_Note1/" target="_self">
+          AutoCAD2020二次开发注意事项
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/30/CAD_Sec_Dev/CAD_SD_Note1/" target="_self">
+        <div>
+          AutoCAD2020 需要引用accoremgd.dll，accoremgd.dll和acmgd.dll中都包含Autodesk.AutoCAD.Runtime的namespace，但因为这两个命名空间位于不同的程序集中，所以没有冲突 查看程序集版本的方法：可以使用.net SDK中的ildasm工具查看MANIFEST节点下的版本信息
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-30 07:30" pubdate>
+              2024-10-30
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/AutoCAD-SecDev/">#AutoCAD_SecDev</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/30/Software/EHAorEHB_Head_Software%20Design/" target="_self">
+          椭圆形封头相关计算软件设计
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/30/Software/EHAorEHB_Head_Software%20Design/" target="_self">
+        <div>
+          椭圆形封头相关计算软件设计思路 架构：MVC 工具：Qt designer设计ui界面，SublimeText编辑器编写程序 编程语言：python 导入模块：pyQt6 原理： 通过ui界面组件的交互(如点击按钮，输入框中输入数据)，触发Control层的槽函数来保存输入数据 点击ui界面(“结果显示”)按钮，触发Control层的槽函数，调用Model计算函数并保存返还的结果，同时发送一个包含
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-30 07:30" pubdate>
+              2024-10-30
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ui-software/">#ui_software</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/29/C_Sharp_Study/%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%E4%B8%8E%E5%87%BD%E6%95%B0%E6%88%90%E5%91%98/" target="_self">
+          C#程序构成与C#类型介绍
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/29/C_Sharp_Study/%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%E4%B8%8E%E5%87%BD%E6%95%B0%E6%88%90%E5%91%98/" target="_self">
+        <div>
+          C#程序构成等的介绍123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596&#123;构
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-29 23:49" pubdate>
+              2024-10-29
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/c-C-%E7%A8%8B%E5%BA%8F%E6%9E%84%E6%88%90-C-%E7%B1%BB%E5%9E%8B/">#c#, C#程序构成, C#类型</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/10/27/Blog/Blog%E6%90%AD%E5%BB%BA/" target="_self">
           Blog搭建
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/27/Blog%E6%90%AD%E5%BB%BA/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/10/27/Blog/Blog%E6%90%AD%E5%BB%BA/" target="_self">
         <div>
-          使用github和hexo搭建博客一、 配置环境并在本地服务器显示博客 准备工作   注册个人Github账号 安装Git (记得添加到环境变量) (git链接) 安装NodeJS (node.js链接)   在Github中创建一个公有仓库，仓库名为&lt;用户名&gt;.github.io （如果仓库是私有的，GitHub Pages网站就无法发布你的仓库）  安装Hexo并初始化  安装He
+          使用github和hexo搭建博客一、 配置环境并在本地服务器显示博客 准备工作   注册个人Github账号 安装Git (记得添加到环境变量) (git链接)(Git官网太慢可找镜像下载) 安装NodeJS (node.js链接)   在Github中创建一个公有仓库，仓库名为&lt;用户名&gt;.github.io （如果仓库是私有的，GitHub Pages网站就无法发布你的仓库）  安
         </div>
       </a>
 
@@ -309,7 +657,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a target="_blank" href="https://github.com/drunk-pigeon/drunk-pigeon.github.io" rel="nofollow noopener noopener"><span>github网址</span></a> 
     </div>
   
   

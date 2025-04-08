@@ -4,11 +4,182 @@
   
   
   <entry>
-    <title>Blog搭建</title>
-    <link href="/2024/10/27/Blog%E6%90%AD%E5%BB%BA/"/>
-    <url>/2024/10/27/Blog%E6%90%AD%E5%BB%BA/</url>
+    <title>Git基本使用方法.md</title>
+    <link href="/2025/04/08/Git/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <url>/2025/04/08/Git/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<h1 id="使用github和hexo搭建博客"><a href="#使用github和hexo搭建博客" class="headerlink" title="使用github和hexo搭建博客"></a>使用github和hexo搭建博客</h1><h2 id="一、-配置环境并在本地服务器显示博客"><a href="#一、-配置环境并在本地服务器显示博客" class="headerlink" title="一、 配置环境并在本地服务器显示博客"></a>一、 配置环境并在本地服务器显示博客</h2><ol><li><p>准备工作 </p><ul><li>注册个人Github账号</li><li>安装Git (记得添加到环境变量) (<a href="https://git-scm.com/">git链接</a>)</li><li>安装NodeJS (<a href="https://nodejs.org/en">node.js链接</a>)</li></ul></li><li><p>在Github中创建一个<strong>公有仓库</strong>，仓库名为&lt;用户名&gt;.github.io （如果仓库是私有的，GitHub Pages网站就无法发布你的仓库）</p></li><li><p>安装Hexo并初始化</p><ul><li><p>安装Hexo,再次运行下面代码检查是否正确安装</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">install -g hexo-<span class="hljs-keyword">cli</span>  <br></code></pre></td></tr></table></figure></li><li><p>在cmd中转到用于存储Hexo项目的文件夹，输入如下内容创建一个新Hexo项目</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> Blog<br>cd Blog<br>npm install   <span class="hljs-comment">//安装Node.js包</span><br></code></pre></td></tr></table></figure></li><li><p>在cmd中输入如下内容，然后可通过浏览器访问 (<a href="http://localhost:4000/">http://localhost:4000</a> )查看效果</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">g</span>   <span class="hljs-comment">//在本地生成相关静态文件</span><br><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">s</span>   <span class="hljs-comment">//启动</span><br></code></pre></td></tr></table></figure></li></ul></li></ol><h2 id="二、-安装fluid主题"><a href="#二、-安装fluid主题" class="headerlink" title="二、 安装fluid主题"></a>二、 安装fluid主题</h2>   <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">npm</span> install --save hexo-theme-fluid //安装(要求Hexo <span class="hljs-number">5</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span> 版本以上)<br></code></pre></td></tr></table></figure><p>   打开blog&#x2F;_config.yml配置文件，修改theme，language和title等字段<br>   <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> fluid <span class="hljs-meta"># 一定要改</span><br><span class="hljs-symbol">post_asset_folder:</span> true <span class="hljs-meta"># 一定要改，方面后期发布修改博客文章  </span><br><span class="hljs-symbol">language:</span> <span class="hljs-built_in">zh</span>-CN <span class="hljs-meta"># 酌情选择（决定导航栏的显示语言）</span><br><span class="hljs-symbol">title:</span> a blog <span class="hljs-meta"># 酌情设置（决定浏览器tab的显示内容）</span><br></code></pre></td></tr></table></figure></p><p>   与上操作类似，打开blog&#x2F;thems&#x2F;fluid&#x2F;_config.yml配置文件，修改blog_title，text等字段<br>   在cmd中输入如下代码，在Blog中添加About页面<br>   <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">hexo <span class="hljs-keyword">new</span> page about<br></code></pre></td></tr></table></figure></p>   <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-comment">//再次运行</span><br><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">g</span>   <span class="hljs-comment">//在本地生成相关静态文件</span><br><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">s</span>   <span class="hljs-comment">//启动</span><br></code></pre></td></tr></table></figure><h2 id="三、-上传至Github"><a href="#三、-上传至Github" class="headerlink" title="三、 上传至Github"></a>三、 上传至Github</h2><ul><li><p>安装hexo-deployer-git</p>   <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure></li><li><p>生成Token</p><ul><li>登录GitHub，在GitHub右上角点击个人资料头像，点击Settings → Developer Settings → Personal access tokens (classic)。</li><li>在界面上选择点击【Generate new token】，填写如下界面(注意在获得tokens时要选择Tokens(classic)并勾选repo)</li></ul></li><li><p>打开blog&#x2F;_config.yml配置文件,设置部署参数</p>   <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> https:<span class="hljs-comment">//&lt;你的Personal access tokens&gt;@github.com/&lt;你的Github用户名&gt;/&lt;你的Github用户名&gt;.github.io.git</span><br><span class="hljs-symbol">  branch:</span> main<br></code></pre></td></tr></table></figure></li><li><p>在shell中输入如下内容，通过浏览器访问浏览器访问 (https:&#x2F;&#x2F;&lt;你的Github用户名&gt;.github.io&#x2F;)查看是否部署成功</p>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo <span class="hljs-selector-tag">g</span> -d<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Git基本使用方法"><a href="#Git基本使用方法" class="headerlink" title="Git基本使用方法"></a>Git基本使用方法</h1><h2 id="一、-Git的认识"><a href="#一、-Git的认识" class="headerlink" title="一、 Git的认识"></a>一、 Git的认识</h2><pre><code class="hljs">Git可以理解为Github和本地文件集的一个桥梁</code></pre><h2 id="二、-Git的使用"><a href="#二、-Git的使用" class="headerlink" title="二、 Git的使用"></a>二、 Git的使用</h2><ul><li><p>Git初始化本地仓库<br>   在需要上传的文件夹中右键，选择Git Bash,输入如下代码</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">git init <br></code></pre></td></tr></table></figure><p>   随后会在当前文件夹初始化Git，可以理解为Git接管了当前文件夹的文件了</p></li><li><p>添加需要的文件或文件夹到Git临时存储区域</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">git add . //添加当前文件夹全部文件，注意add和.之间有空格<br></code></pre></td></tr></table></figure><p>   or</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">git add &lt;filename&gt;//添加特定文件<br></code></pre></td></tr></table></figure></li><li><p>添加备注信息</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">git commit -m &quot;这里添加备注信息&quot;//其中-m 指的是message<br></code></pre></td></tr></table></figure></li><li><p>查看当前分支</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">git branch<br></code></pre></td></tr></table></figure></li><li><p>远程推送</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">git push origin &lt;branch_name&gt; //origin 为默认的远程仓库名，&lt;branch_name&gt;为分支名，如master,main等<br></code></pre></td></tr></table></figure></li><li><p>clone github上的仓库，考虑到网络问题，最简单的方法是直接download zip</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>构造函数</title>
+    <link href="/2024/11/03/C_Sharp_Study/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    <url>/2024/11/03/C_Sharp_Study/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<p>实例构造函数</p><ul><li>用于初始化实例</li><li>如果希望在类外部常见类的实例，则需要将构造函数定义为public</li><li>构造函数的名称和类名相同</li><li>构造函数不能有返回值</li><li>当一个类没有写构造函数时，会默认添加一个无参数的默认构造函数</li></ul><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span><br>&#123;<br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyClass</span>()<span class="hljs-comment">//没有返回类型</span></span><br>&#123;<br>...<br>&#125;<br>...<br>&#125;<br><br></code></pre></td></tr></table></figure><p>静态构造函数</p><ul><li>类只能有一个静态构造函数，而且不能带参数</li><li>不能有修饰符</li><li>不能修改实例成员</li></ul><p>静态构造函数如何被调用</p><ul><li>在引用任何静态成员之前</li><li>在创建类的实例之前</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c#study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>属性</title>
+    <link href="/2024/11/03/C_Sharp_Study/%E5%B1%9E%E6%80%A7/"/>
+    <url>/2024/11/03/C_Sharp_Study/%E5%B1%9E%E6%80%A7/</url>
+    
+    <content type="html"><![CDATA[<ul><li>属性是类成员</li><li>有类型</li><li>可以被赋值和读取</li></ul><p>属性是一种特殊的函数，没有给它分配内存<br>属性的本质就是用来操作绑定的字段</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-built_in">int</span> MyValue<br>&#123;<br><span class="hljs-keyword">set</span><span class="hljs-comment">//给属性赋值时调用</span><br>&#123;<br>code1;<br>&#125;<br><span class="hljs-keyword">get</span><span class="hljs-comment">//获取属性的值时调用</span><br>&#123;<br>code2;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>在VS中可以通过图标来区分属性和字段，属性图标是个扳手</p><p>只读属性与只写属性</p><p>自动属性(自动添加后备字段，然后完成后备字段的读写)</p><ul><li>不声明后备字段</li><li>不提供访问器的方法体<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Name&#123;<span class="hljs-keyword">set</span>;<span class="hljs-keyword">get</span>;&#125;<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c#study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>类成员和实例</title>
+    <link href="/2024/11/02/C_Sharp_Study/%E7%B1%BB%E6%88%90%E5%91%98%E5%92%8C%E5%AE%9E%E4%BE%8B/"/>
+    <url>/2024/11/02/C_Sharp_Study/%E7%B1%BB%E6%88%90%E5%91%98%E5%92%8C%E5%AE%9E%E4%BE%8B/</url>
+    
+    <content type="html"><![CDATA[<p>静态字段：被类所有实例共享，所有实例访问同一内存位置<br>在内存中的体现：堆中的静态区域<br>字段前加static修饰符</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c#study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>递归</title>
+    <link href="/2024/11/02/C_Sharp_Study/%E9%80%92%E5%BD%92/"/>
+    <url>/2024/11/02/C_Sharp_Study/%E9%80%92%E5%BD%92/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c#study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>方法重载</title>
+    <link href="/2024/11/02/C_Sharp_Study/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/"/>
+    <url>/2024/11/02/C_Sharp_Study/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/</url>
+    
+    <content type="html"><![CDATA[<p>同一个类中有一个以上的相同方法名的方法，称为方法重载(overload)<br>（参数数目不同，参数类型和顺序不一样，）</p><p>命名参数，可以通过method(a:实参, b:实参)方式</p><p>可选参数：带默认值的形参(ref, out,params这些参数是不允许使用可选参数)</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c#study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>AutoCAD2020二次开发注意事项</title>
+    <link href="/2024/10/30/CAD_Sec_Dev/CAD_SD_Note1/"/>
+    <url>/2024/10/30/CAD_Sec_Dev/CAD_SD_Note1/</url>
+    
+    <content type="html"><![CDATA[<p>AutoCAD2020 需要引用accoremgd.dll，<br>accoremgd.dll和acmgd.dll中都包含Autodesk.AutoCAD.Runtime的namespace，但因为这两个命名空间位于不同的程序集中，所以没有冲突</p><p>查看程序集版本的方法：可以使用.net SDK中的ildasm工具查看MANIFEST节点下的版本信息</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>AutoCAD_SecDev</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>椭圆形封头相关计算软件设计</title>
+    <link href="/2024/10/30/Software/EHAorEHB_Head_Software%20Design/"/>
+    <url>/2024/10/30/Software/EHAorEHB_Head_Software%20Design/</url>
+    
+    <content type="html"><![CDATA[<h1 id="椭圆形封头相关计算软件设计"><a href="#椭圆形封头相关计算软件设计" class="headerlink" title="椭圆形封头相关计算软件设计"></a>椭圆形封头相关计算软件设计</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul><li>架构：MVC</li><li>工具：Qt designer设计ui界面，SublimeText编辑器编写程序</li><li>编程语言：python</li><li>导入模块：pyQt6</li><li>原理：<ul><li>通过ui界面组件的交互(如点击按钮，输入框中输入数据)，触发Control层的槽函数来保存输入数据</li><li>点击ui界面(“结果显示”)按钮，触发Control层的槽函数，调用Model计算函数并保存返还的结果，同时发送一个包含该结果数据的信号</li><li>上一步发送的信号以及和结果显示框连接，将会直接在结果显示框更新结果。</li></ul></li></ul><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>新建一个python虚拟环境，用pip下载pyQt6</p><p>文件结构：<br>└─Visual UI  (文件夹)<br>    │  calc.py<br>    │  main.py<br>    │  test.py<br>    │<br>    ├─Controller  (文件夹)<br>    │  │  FengTou_controller.py<br>    │<br>    ├─Model  (文件夹)<br>    │  │  FengTou_model.py<br>    │  │  Libary.py<br>    │  ├─image  (文件夹)<br>    │<br>    └─View  (文件夹)<br>        │  uiTopy.py<br>        │  view_1.py<br>        │  view_1.ui</p><p>大体设计思路：</p><ol><li>通过Qt designer设计ui界面，生成ui文件，然后通过pyuic将ui文件转换为py文件，MVC架构中View部分就基本完成了</li></ol><ul><li>备注1：其中我的View文件夹中的uiTopy.py是一个将ui文件转化为py文件的脚本</li><li>备注2：view_1.py 是ui文件转换后的py文件</li></ul><ol start="2"><li>Model部分的设计：</li></ol><ul><li><p>Libary.py：该文件主要存放一些最基本的常数和函数，可以按自己的需求编写一些其他的函数，以下是部分例子：</p><ul><li>chooseRho(material&#x3D;0)：选择材料密度</li><li>Thickness(thickness)：设置材料厚度</li><li>V_GangBan(L, W, C, output_unit &#x3D; “mm^3”)：返回钢板体积</li><li>V_GuanCai(D, d, H, output_unit &#x3D; “mm^3”)：返回管材体积</li><li>V_23EHA_B_FengTou(Di, h, output_unit &#x3D; “mm^3”)：返回GB&#x2F;T 25198-2023 EHA(B)封头容积</li><li>F_nFloor(x, n)：截取小数点后n位(向下取整)</li><li>F_nCeil(x, n)：截取小数点后n位(向上取整)</li></ul></li><li><p>FengTou_model.py：该文件存放封头模型类以及相关类方法</p></li><li></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ui_software</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>C#程序构成与C#类型介绍</title>
+    <link href="/2024/10/29/C_Sharp_Study/%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%E4%B8%8E%E5%87%BD%E6%95%B0%E6%88%90%E5%91%98/"/>
+    <url>/2024/10/29/C_Sharp_Study/%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%E4%B8%8E%E5%87%BD%E6%95%B0%E6%88%90%E5%91%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="C-程序构成等的介绍"><a href="#C-程序构成等的介绍" class="headerlink" title="C#程序构成等的介绍"></a>C#程序构成等的介绍</h2><figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><code class="hljs d">&#123;构成<br>namespace<br>&#123;<br>Class1<br>&#123;<br>data_members&#123;存储数据：字段,常量&#125;<br>function_members&#123;方法，属性，构造函数，析构函数，运算符，索引器，事件&#125;<br>&#125;<br>Class2<br>&#123;<br>......<br>func()<br>&#123;<br>局部变量(本地变量)<br>&#125;<br>&#125;<br>......<br>&#125;<br>&#125;<br><br>&#123;类型<br>&#123;预定义类型（都是小写字母）(实例化就能使用)<br>简单类型<br>&#123;<br>非数值类型<br>&#123;<br><span class="hljs-built_in">bool</span>(布尔类型,值为ture / <span class="hljs-literal">false</span>)<br><span class="hljs-built_in">char</span>(字符类型,unicode编码)<br>&#125;<br>数值类型<br>&#123;<br>整数类型<br>&#123;<br><span class="hljs-number">8</span>-Bit&#123;sbyte, <span class="hljs-keyword">byte</span>&#125;<br><span class="hljs-number">16</span>-Bit&#123;<span class="hljs-built_in">short</span>, <span class="hljs-built_in">ushort</span>&#125;<br><span class="hljs-number">32</span>-Bit&#123;<span class="hljs-keyword">int</span>, <span class="hljs-built_in">uint</span>&#125;<br><span class="hljs-number">64</span>-Bit&#123;<span class="hljs-built_in">long</span>, <span class="hljs-built_in">ulong</span>&#125;<br>&#125;<br>浮点类型<br>&#123;<br>decimal<br><span class="hljs-built_in">float</span><br><span class="hljs-built_in">double</span><br>&#125;<br>&#125;<br>&#125;<br>非简单类型<br>&#123;<br><span class="hljs-built_in">string</span> (unicode, 由多个字符组成)<br>object (其他类型的基类)<br>dynamic (动态类型)<br>&#125;<br>&#125;<br>&#123;自定义类型(对预定义类型再封装)（先声明后使用）<br><span class="hljs-keyword">class</span><br><span class="hljs-keyword">struct</span><br>array<br><span class="hljs-keyword">enum</span><br><span class="hljs-built_in">delegate</span>(委托类型)<br><span class="hljs-keyword">interface</span><br>&#125;<br>&#125;<br><br>&#123;值类型与引用类型<br>&#123;值类型(预定义类型中全部简单类型，和自定义类型中的<span class="hljs-keyword">struct</span>,<span class="hljs-keyword">enum</span>)<br>数据存储在栈中<br>&#125;<br>&#123;引用类型(预定义类型中全部非简单类型，自定义类型中<span class="hljs-keyword">class</span>,<span class="hljs-keyword">interface</span>,<span class="hljs-built_in">delegate</span>,array)<br>数据存储分为两部分，栈中存储地址，堆中存储实际数据<br>&#125;<br>&#125;<br><br>&#123;栈与堆<br>&#123;栈<br>&#123;栈存储的数据类型<br>存储某些类型变量的值<br>程序当前的执行环境<br>传递给方法的参数<br>&#125;<br>&#125;<br>&#123;堆<br>&#125;<br>&#125;<br><br>&#123;变量<br>&#123;<br>本地变量 存储在栈/栈和堆 不能自动初始化 <br>字段 <br>&#123;<br>类字段 存储在堆 自动初始化 类的成员<br>结构字段 存储在栈和堆 自动初始化 结构的成员<br>&#125;<br>参数 存储在堆 不能自动初始化 用于把值传入或传出方法<br>数组元素 存储在堆 自动初始化 数组的成员 <br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c#, C#程序构成, C#类型</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Blog搭建</title>
+    <link href="/2024/10/27/Blog/Blog%E6%90%AD%E5%BB%BA/"/>
+    <url>/2024/10/27/Blog/Blog%E6%90%AD%E5%BB%BA/</url>
+    
+    <content type="html"><![CDATA[<h1 id="使用github和hexo搭建博客"><a href="#使用github和hexo搭建博客" class="headerlink" title="使用github和hexo搭建博客"></a>使用github和hexo搭建博客</h1><h2 id="一、-配置环境并在本地服务器显示博客"><a href="#一、-配置环境并在本地服务器显示博客" class="headerlink" title="一、 配置环境并在本地服务器显示博客"></a>一、 配置环境并在本地服务器显示博客</h2><ol><li><p>准备工作 </p><ul><li>注册个人Github账号</li><li>安装Git (记得添加到环境变量) (<a href="https://git-scm.com/">git链接</a>)(Git官网太慢可找镜像下载)</li><li>安装NodeJS (<a href="https://nodejs.org/en">node.js链接</a>)</li></ul></li><li><p>在Github中创建一个<strong>公有仓库</strong>，仓库名为&lt;用户名&gt;.github.io （如果仓库是私有的，GitHub Pages网站就无法发布你的仓库）</p></li><li><p>安装Hexo并初始化</p><ul><li><p>Git Bash中安装Hexo,再次运行下面代码检查是否正确安装</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">nmp install -g hexo-<span class="hljs-keyword">cli</span>  <br></code></pre></td></tr></table></figure></li><li><p>在cmd中转到用于存储Hexo项目的文件夹，输入如下内容创建一个新Hexo项目</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> Blog<br>cd Blog<br>npm install   <span class="hljs-comment">//安装Node.js包</span><br></code></pre></td></tr></table></figure></li><li><p>在cmd中输入如下内容，然后可通过浏览器访问 (<a href="http://localhost:4000/">http://localhost:4000</a> )查看效果</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">g</span>   <span class="hljs-comment">//在本地生成相关静态文件</span><br><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">s</span>   <span class="hljs-comment">//启动</span><br></code></pre></td></tr></table></figure></li></ul></li></ol><h2 id="二、-安装fluid主题"><a href="#二、-安装fluid主题" class="headerlink" title="二、 安装fluid主题"></a>二、 安装fluid主题</h2>   <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">npm</span> install --save hexo-theme-fluid //安装(要求Hexo <span class="hljs-number">5</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span> 版本以上)<br></code></pre></td></tr></table></figure><p>   打开blog&#x2F;_config.yml配置文件，修改theme，language和title等字段<br>   <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> fluid <span class="hljs-meta"># 一定要改</span><br><span class="hljs-symbol">post_asset_folder:</span> true <span class="hljs-meta"># 一定要改，方面后期发布修改博客文章  </span><br><span class="hljs-symbol">language:</span> <span class="hljs-built_in">zh</span>-CN <span class="hljs-meta"># 酌情选择（决定导航栏的显示语言）</span><br><span class="hljs-symbol">title:</span> a blog <span class="hljs-meta"># 酌情设置（决定浏览器tab的显示内容）</span><br></code></pre></td></tr></table></figure></p><p>   与上操作类似，打开blog&#x2F;thems&#x2F;fluid&#x2F;_config.yml配置文件，修改blog_title，text等字段<br>   在cmd中输入如下代码，在Blog中添加About页面<br>   <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">hexo <span class="hljs-keyword">new</span> page about<br></code></pre></td></tr></table></figure></p>   <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-comment">//再次运行</span><br><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">g</span>   <span class="hljs-comment">//在本地生成相关静态文件</span><br><span class="hljs-selector-tag">hexo</span> <span class="hljs-selector-tag">s</span>   <span class="hljs-comment">//启动</span><br></code></pre></td></tr></table></figure><h2 id="三、-上传至Github"><a href="#三、-上传至Github" class="headerlink" title="三、 上传至Github"></a>三、 上传至Github</h2><ul><li><p>安装hexo-deployer-git</p>   <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure></li><li><p>生成Token</p><ul><li>登录GitHub，在GitHub右上角点击个人资料头像，点击Settings → Developer Settings → Personal access tokens (classic)。</li><li>在界面上选择点击【Generate new token】，填写如下界面(注意在获得tokens时要选择Tokens(classic)并勾选repo)</li></ul></li><li><p>打开Blog&#x2F;_config.yml配置文件,设置部署参数</p>   <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> https:<span class="hljs-comment">//&lt;你的Personal access tokens&gt;@github.com/&lt;你的Github用户名&gt;/&lt;你的Github用户名&gt;.github.io.git</span><br><span class="hljs-symbol">  branch:</span> main<br></code></pre></td></tr></table></figure><p>   -部署</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean &amp;&amp; hexo <span class="hljs-keyword">generate</span> &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure></li><li><p>在shell中输入如下内容，通过浏览器访问浏览器访问 (https:&#x2F;&#x2F;&lt;你的Github用户名&gt;.github.io&#x2F;)查看是否部署成功</p>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo <span class="hljs-selector-tag">g</span> -d<br></code></pre></td></tr></table></figure></li></ul>]]></content>
     
     
     
