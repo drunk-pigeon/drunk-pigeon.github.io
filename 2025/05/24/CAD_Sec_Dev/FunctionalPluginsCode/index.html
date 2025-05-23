@@ -19,22 +19,22 @@
   <meta name="author" content="ZuiYan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="使用github和hexo搭建博客 准备工作  框架方案结构：Solusion:CAD_SecDev  Z_PluginInterface IPlugin.cs&#x2F;&#x2F;插件接口   Z_HostLoader（需引用AutoCADCAD_API和Z_PluginInterface，CopyLocal:False） CommandEntry.cs&#x2F;&#x2F;插件加载器命令入">
+    <meta name="description" content="CAD_Sec_Dev功能插件更新2025-05-24  IPlugin.cs：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AutoCAD.net开发框架">
-<meta property="og:url" content="http://example.com/2025/05/20/CAD_Sec_Dev/AutoCAD.net%20SecDev%20Framework/index.html">
+<meta property="og:title" content="FunctionalPluginsCode">
+<meta property="og:url" content="http://example.com/2025/05/24/CAD_Sec_Dev/FunctionalPluginsCode/index.html">
 <meta property="og:site_name" content="ZuiYan&#39;s Blog">
-<meta property="og:description" content="使用github和hexo搭建博客 准备工作  框架方案结构：Solusion:CAD_SecDev  Z_PluginInterface IPlugin.cs&#x2F;&#x2F;插件接口   Z_HostLoader（需引用AutoCADCAD_API和Z_PluginInterface，CopyLocal:False） CommandEntry.cs&#x2F;&#x2F;插件加载器命令入">
+<meta property="og:description" content="CAD_Sec_Dev功能插件更新2025-05-24  IPlugin.cs：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-19T17:14:53.000Z">
-<meta property="article:modified_time" content="2025-05-19T18:33:13.518Z">
+<meta property="article:published_time" content="2025-05-23T19:47:46.000Z">
+<meta property="article:modified_time" content="2025-05-23T19:52:29.550Z">
 <meta property="article:author" content="ZuiYan">
 <meta property="article:tag" content="CAD_Sec_Dev">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>AutoCAD.net开发框架 - ZuiYan&#39;s Blog</title>
+  <title>FunctionalPluginsCode - ZuiYan&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -188,7 +188,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AutoCAD.net开发框架"></span>
+            <span id="subtitle" data-typed-text="FunctionalPluginsCode"></span>
           
         </div>
 
@@ -199,8 +199,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-20 01:14" pubdate>
-          2025年5月20日 凌晨
+        <time datetime="2025-05-24 03:47" pubdate>
+          2025年5月24日 凌晨
         </time>
       </span>
     
@@ -211,7 +211,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          357 字
+          351 字
         
       </span>
     
@@ -272,44 +272,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">AutoCAD.net开发框架</h1>
+            <h1 id="seo-header">FunctionalPluginsCode</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="使用github和hexo搭建博客"><a href="#使用github和hexo搭建博客" class="headerlink" title="使用github和hexo搭建博客"></a>使用github和hexo搭建博客</h1><ol>
-<li>准备工作</li>
-</ol>
-<p>框架方案结构：<br>Solusion:CAD_SecDev</p>
+                <h1 id="CAD-Sec-Dev功能插件更新"><a href="#CAD-Sec-Dev功能插件更新" class="headerlink" title="CAD_Sec_Dev功能插件更新"></a>CAD_Sec_Dev功能插件更新</h1><p>2025-05-24</p>
 <ul>
-<li>Z_PluginInterface<ul>
-<li>IPlugin.cs&#x2F;&#x2F;插件接口</li>
-</ul>
-</li>
-<li>Z_HostLoader（需引用AutoCADCAD_API和Z_PluginInterface，CopyLocal:False）<ul>
-<li>CommandEntry.cs&#x2F;&#x2F;插件加载器命令入口</li>
-<li>PluginLoder.cs&#x2F;&#x2F;插件加载器</li>
-</ul>
-</li>
-<li>Z_TestPlugin（需引用AutoCADCAD_API和Z_PluginInterface，CopyLocal:False）<ul>
-<li>PluginEntry.cs&#x2F;&#x2F;插件入口</li>
-</ul>
-</li>
-</ul>
-<p>构筑环境x64</p>
-<p>代码：</p>
-<ul>
-<li><p>IPlugin.cs：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">Z.PluginInterface</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title">IPlugin</span> &#123; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">RegisterCommands</span>()</span>; &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>CommandEntry.cs:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> Autodesk.AutoCAD.ApplicationServices.Core;<br><span class="hljs-keyword">using</span> Autodesk.AutoCAD.Runtime;<br><span class="hljs-keyword">using</span> Exception = Autodesk.AutoCAD.Runtime.Exception;<br><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">Z.HostLoader</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Commands</span><br>    &#123;<br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> PluginLoader _loader = <span class="hljs-keyword">new</span> PluginLoader();<br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-built_in">string</span> PluginPath = <span class="hljs-string">@&quot;C:\Users\ZuiYan\Desktop\Program\CAD_SecDev\SamplePlugin\bin\x64\Debug\Z_TestPlugin.dll&quot;</span>; <span class="hljs-comment">// 插件路径</span><br><br>        [<span class="hljs-meta">CommandMethod(<span class="hljs-string">&quot;dd&quot;</span>)</span>]<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadPlugin</span>()</span><br>        &#123;<br>            <span class="hljs-keyword">try</span><br>            &#123;<br>                _loader.Load(PluginPath);<br>                Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(<br>                    <span class="hljs-string">&quot;\n插件加载成功！输入ZTEST测试命令。&quot;</span>);<br>            &#125;<br>            <span class="hljs-keyword">catch</span> (Exception ex)<br>            &#123;<br>                Application.ShowAlertDialog(<span class="hljs-string">$&quot;加载失败: <span class="hljs-subst">&#123;ex.Message&#125;</span>&quot;</span>);<br>            &#125;<br>        &#125;<br><br>        [<span class="hljs-meta">CommandMethod(<span class="hljs-string">&quot;UNLOADPLUGIN&quot;</span>)</span>]<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">UnloadPlugin</span>()</span><br>        &#123;<br>            _loader.Unload();<br>            Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(<br>                <span class="hljs-string">&quot;\n引用&#123;_plugin&#125;已清理！&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>PluginLoder.cs:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Reflection;<br><span class="hljs-keyword">using</span> Z.PluginInterface;<br><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">Z.HostLoader</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PluginLoader</span><br>    &#123;<br>        <span class="hljs-keyword">private</span> IPlugin _plugin;<br><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Load</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> pluginDllPath</span>)</span><br>        &#123;<br>            <span class="hljs-comment">// 加载程序集到当前AppDomain</span><br>            Assembly assembly = Assembly.LoadFrom(pluginDllPath);<br>            Type type = assembly.GetType(<span class="hljs-string">&quot;Z.TestPlugin.PluginEntry&quot;</span>);<span class="hljs-comment">//需要参数：类型的全限定名namespace.classname</span><br>            _plugin = (IPlugin)Activator.CreateInstance(type);<br>            _plugin.RegisterCommands();<br>        &#125;<br><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Unload</span>()</span><br>        &#123;<br>            <span class="hljs-comment">// 主域无法卸载程序集，此处仅清理引用</span><br>            _plugin = <span class="hljs-literal">null</span>;<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>PluginEntry.cs:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> Autodesk.AutoCAD.Runtime;<br><span class="hljs-keyword">using</span> Application = Autodesk.AutoCAD.ApplicationServices.Application;<br><span class="hljs-keyword">using</span> Z.PluginInterface;<br><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">Z.TestPlugin</span><br>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PluginEntry</span> : <span class="hljs-title">MarshalByRefObject</span>, <span class="hljs-title">IPlugin</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RegisterCommands</span>()</span><br>        &#123;<br>            <span class="hljs-comment">// 确保TestCommands类型被加载</span><br>            <span class="hljs-keyword">var</span> dummy = <span class="hljs-keyword">typeof</span>(TestCommands);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TestCommands</span><br>    &#123;<br>        [<span class="hljs-meta">CommandMethod(<span class="hljs-string">&quot;ZTEST&quot;</span>)</span>]<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestCommand</span>()</span><br>        &#123;<br>            <span class="hljs-keyword">var</span> doc = Application.DocumentManager.MdiActiveDocument;<br>            doc.Editor.WriteMessage(<span class="hljs-string">&quot;\nHello from SamplePlugin!&quot;</span>);<br>            System.Windows.Forms.MessageBox.Show(<span class="hljs-string">&quot;测试命令执行成功1！&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>IPlugin.cs：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> System.Linq;<br><span class="hljs-keyword">using</span> System.Text;<br><span class="hljs-keyword">using</span> System.Threading.Tasks;<br><span class="hljs-keyword">using</span> Autodesk.AutoCAD.ApplicationServices;<br><span class="hljs-keyword">using</span> Autodesk.AutoCAD.Runtime;<br><span class="hljs-keyword">using</span> System.Windows.Forms;<br><span class="hljs-keyword">using</span> Application = Autodesk.AutoCAD.ApplicationServices.Application;<br><span class="hljs-keyword">using</span> Z.PluginInterface;<br><span class="hljs-keyword">using</span> Autodesk.AutoCAD.EditorInput;<br><span class="hljs-keyword">using</span> System.Diagnostics;<br><span class="hljs-keyword">using</span> Exception = Autodesk.AutoCAD.Runtime.Exception;<br><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">Z.TestPlugin</span><br>&#123;<br>    <span class="hljs-meta">#<span class="hljs-keyword">region</span> 注册命令</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PluginEntry</span> : <span class="hljs-title">MarshalByRefObject</span>, <span class="hljs-title">IPlugin</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RegisterCommands</span>()</span><br>        &#123;<br>            <span class="hljs-comment">// 确保TestCommands类型被加载</span><br>            <span class="hljs-keyword">var</span> dummy = <span class="hljs-keyword">typeof</span>(TestCommands);<br>        &#125;<br>    &#125;<br>    <span class="hljs-meta">#<span class="hljs-keyword">endregion</span></span><br><br>    <span class="hljs-meta">#<span class="hljs-keyword">region</span> 命令注册及命令实现</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TestCommands</span><br>    &#123;<br>        <span class="hljs-meta">#<span class="hljs-keyword">region</span> 命令1</span><br>        [<span class="hljs-meta">CommandMethod(<span class="hljs-string">&quot;ZTEST&quot;</span>)</span>]<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">TestCommand</span>()</span><br>        &#123;<br>            <span class="hljs-meta">#<span class="hljs-keyword">region</span> defaultTestCode</span><br>            <span class="hljs-comment">/*          var doc = Application.DocumentManager.MdiActiveDocument;</span><br><span class="hljs-comment">                        doc.Editor.WriteMessage(&quot;\nHello from SamplePlugin!&quot;);</span><br><span class="hljs-comment">                        System.Windows.Forms.MessageBox.Show(&quot;测试命令执行成功1！&quot;);*/</span><br>            <span class="hljs-meta">#<span class="hljs-keyword">endregion</span></span><br>        &#125;<br>        <span class="hljs-meta">#<span class="hljs-keyword">endregion</span></span><br><br>        <span class="hljs-meta">#<span class="hljs-keyword">region</span> 命令2</span><br>        [<span class="hljs-meta">CommandMethod(<span class="hljs-string">&quot;ZTEST2&quot;</span>)</span>]<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SpecialInputCommand</span>()</span><br>        &#123;<br>            <span class="hljs-keyword">var</span> processor = <span class="hljs-keyword">new</span> InputProcessor();<br>            Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;<br><br>            GetUserInputWithCallback(<span class="hljs-string">&quot;请输入指令:&quot;</span>, ed, processor.HandleSpecialInput);<br>        &#125;<br>    <span class="hljs-meta">#<span class="hljs-keyword">endregion</span></span><br><br>        <span class="hljs-meta">#<span class="hljs-keyword">region</span> 封装函数</span><br>    <span class="hljs-comment">//输入委托</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">InputSuccessHandler</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> inputText, Editor ed</span>)</span>;<br>    <span class="hljs-comment">//带回调函数的输入逻辑</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">GetUserInputWithCallback</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> promptMessage, Editor ed, InputSuccessHandler onSuccess</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (ed == <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br><br>        <span class="hljs-keyword">try</span><br>        &#123;<br>            <span class="hljs-keyword">var</span> promptOptions = <span class="hljs-keyword">new</span> PromptStringOptions(promptMessage)<br>            &#123;<br>                AllowSpaces = <span class="hljs-literal">true</span>,<br>                UseDefaultValue = <span class="hljs-literal">false</span><br>            &#125;;<br><br>            PromptResult result = ed.GetString(promptOptions);<br><br>            <span class="hljs-keyword">switch</span> (result.Status)<br>            &#123;<br>                <span class="hljs-keyword">case</span> PromptStatus.OK:<br>                    <span class="hljs-comment">// 调用外部传入的处理逻辑</span><br>                    onSuccess?.Invoke(result.StringResult, ed);<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>                <span class="hljs-keyword">case</span> PromptStatus.Cancel:<br>                    ed.WriteMessage(<span class="hljs-string">&quot;\n操作已取消&quot;</span>);<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>                <span class="hljs-literal">default</span>:<br>                    ed.WriteMessage(<span class="hljs-string">$&quot;\n输入错误: <span class="hljs-subst">&#123;result.Status&#125;</span>&quot;</span>);<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">catch</span> (Exception ex)<br>        &#123;<br>            ed.WriteMessage(<span class="hljs-string">$&quot;\n发生异常: <span class="hljs-subst">&#123;ex.Message&#125;</span>&quot;</span>);<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//输入回调函数</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">InputProcessor</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">HandleSpecialInput</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> input, Editor editor</span>)</span><br>        &#123;<br>            <span class="hljs-comment">// 实现复杂业务逻辑</span><br>            <span class="hljs-keyword">if</span> (input.StartsWith(<span class="hljs-string">&quot;#&quot;</span>))<br>            &#123;<br>                editor.WriteMessage(<span class="hljs-string">&quot;\n检测到特殊指令!&quot;</span>);<br>                <span class="hljs-comment">// 执行解析指令操作...</span><br>            &#125;<br>            <span class="hljs-keyword">else</span><br>            &#123;<br>                editor.WriteMessage(<span class="hljs-string">$&quot;\n常规输入: <span class="hljs-subst">&#123;input&#125;</span>&quot;</span>);<br>                    editor.WriteMessage(<span class="hljs-string">&quot;成功调用回调函数666！&quot;</span>);<br>            &#125;<br>        &#125;<br>    &#125;<br>        <span class="hljs-meta">#<span class="hljs-keyword">endregion</span></span><br>    &#125;<br>    <span class="hljs-meta">#<span class="hljs-keyword">endregion</span></span><br><br><br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
 
                 
@@ -335,8 +305,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AutoCAD.net开发框架</div>
-      <div>http://example.com/2025/05/20/CAD_Sec_Dev/AutoCAD.net SecDev Framework/</div>
+      <div>FunctionalPluginsCode</div>
+      <div>http://example.com/2025/05/24/CAD_Sec_Dev/FunctionalPluginsCode/</div>
     </div>
     <div class="license-meta">
       
@@ -349,7 +319,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年5月20日</div>
+          <div>2025年5月24日</div>
         </div>
       
       
@@ -380,18 +350,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/05/24/CAD_Sec_Dev/FunctionalPluginsCode/" title="FunctionalPluginsCode">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">FunctionalPluginsCode</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/08/Git/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Git基本使用方法.md">
-                        <span class="hidden-mobile">Git基本使用方法.md</span>
+                      <a href="/2025/05/20/CAD_Sec_Dev/AutoCAD.net%20SecDev%20Framework/" title="AutoCAD.net开发框架">
+                        <span class="hidden-mobile">AutoCAD.net开发框架</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
